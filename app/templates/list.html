@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} Wardrobe List{% endblock %}
+{% block content %}
+<table >
+  <thead>
+  <tr>
+    <th>NAME</th>
+    <th>TYPE</th>
+    <th>COLOR</th>
+    <th>SIZE</th>
+    <th>SEASON</th>
+    <th>DATE</th>
+  </tr>
+
+  </thead>
+  <tbody>
+  {% for wardrobe in data %}
+  <tr>
+    <td>{{ wardrobe.name }}</td>
+    <td>{{ wardrobe.type }}</td>
+    <td>{{ wardrobe.color }}</td>
+    <td>{{ wardrobe.size }}</td>
+    <td>{{ wardrobe.season }}</td>
+    <td>{{ wardrobe.date }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
